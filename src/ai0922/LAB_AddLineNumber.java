@@ -1,17 +1,13 @@
-package ai0915;
+package ai0922;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
-public class FileReaderTest3 {
+public class LAB_AddLineNumber {
     public static void main(String[] args) {
         try{
-            StringBuilder sb = new StringBuilder();
 //            BufferedReader br = new BufferedReader(new FileReader("D:/FileIOTest/myData1.txt"));
             BufferedReader br = new BufferedReader(new FileReader("myData1.txt"));
-
+            int num1 = 1;
             String line = "";
 
             while(true){
@@ -19,12 +15,9 @@ public class FileReaderTest3 {
                 if(line==null){
                     break;
                 }
-                sb.append(line).append("\n");
+                System.out.println(num1 + " : " + line);
+                num1++;
             }
-            br.close();
-
-            sb.reverse();
-            System.out.println(sb);
 
         } catch (FileNotFoundException e){
             throw new RuntimeException(e);
