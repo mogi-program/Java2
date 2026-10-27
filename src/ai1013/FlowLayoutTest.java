@@ -1,4 +1,4 @@
-package ai01013;
+package ai1013;
 
 import center.CenterFrame2;
 
@@ -7,7 +7,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class FlowLayoutTest extends JFrame {
     ArrayList<JButton> list = new ArrayList<JButton>(5);

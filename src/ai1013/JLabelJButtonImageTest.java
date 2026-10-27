@@ -1,4 +1,4 @@
-package ai01013;
+package ai1013;
 
 import javax.swing.*;
 import center.CenterFrame;
