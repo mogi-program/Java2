@@ -10,7 +10,7 @@ import java.awt.event.MouseListener;
 public class MouseEventTest extends JFrame {
     JLabel lbl = new JLabel();
     public MouseEventTest(){
-        SetFrame.setFrame(this, 500, 500, "MouseEventTest");
+
         JPanel panel = new JPanel();
         JButton btn = new JButton("마우스 이벤트 연습");
 
@@ -20,8 +20,8 @@ public class MouseEventTest extends JFrame {
 
         btn.addMouseListener(mouseListener);
 
-        setVisible(true);
 
+        SetFrame.setFrame(this, 500, 500, "MouseEventTest");
     }
 
     MouseListener mouseListener = new MouseListener(){
@@ -32,7 +32,20 @@ public class MouseEventTest extends JFrame {
 
         @Override
         public void mousePressed(MouseEvent e) {
-            lbl.setText("버튼에 마우스가 눌러짐");
+            int btnc = e.getButton();
+            switch (btnc){
+                case 1:
+                    lbl.setText("왼쪽");
+                    break;
+                case MouseEvent.BUTTON2:
+                    lbl.setText("가운데");
+                    break;
+                case MouseEvent.BUTTON3:
+                    lbl.setText("오른쪽");
+                    break;
+
+            }
+
         }
 
         @Override

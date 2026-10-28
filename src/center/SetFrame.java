@@ -9,6 +9,7 @@ public class SetFrame extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Point point = CenterFrame2.getLocation(w, h);
         frame.setBounds(point.x, point.y, w, h);
+        frame.setVisible(true);
     }
 
 
