@@ -1,19 +1,19 @@
 package book_management.domain;
 
 public class Book {
-    private int isbn;
+    private String isbn;
     private String name;
     private String author;
     private int price;
     private int inventory;
     private String category_name;
-    private int publish_name;
+    private String publish_name;
 
-    public int getIsbn() {
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
@@ -57,11 +57,11 @@ public class Book {
         this.category_name = category_name;
     }
 
-    public int getPublish_name() {
+    public String getPublish_name() {
         return publish_name;
     }
 
-    public void setPublish_name(int publish_name) {
+    public void setPublish_name(String publish_name) {
         this.publish_name = publish_name;
     }
 }
